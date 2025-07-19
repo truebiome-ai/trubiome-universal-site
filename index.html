@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TruBiome.AI Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fbfd;
+      color: #222;
+    }
+html {
+  scroll-behavior: smooth;
+}
+   .hero {
+  background: linear-gradient(135deg, #56CCF2 0%, #9B51E0 100%);
+  padding: 20px 20px;
+  text-align: center;
+  color: white;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+
+    .hero img {
+      max-width: 280px;
+      height: auto;
+      margin: 0 auto 10px;
+      display: block;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      margin-top: 8px;
+      font-weight: 400;
+      opacity: 0.9;
+      animation: fadeIn 1s ease-in-out 0.4s forwards;
+    }
+
+    .cta {
+      margin-top: 24px;
+      display: inline-block;
+      padding: 14px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      background: #ffffff33;
+      border: 2px solid white;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      animation: fadeIn 1s ease-in-out 0.6s forwards;
+    }
+
+    .cta:hover {
+      background: white;
+      color: #7a4df5;
+      box-shadow: 0 0 12px #ffffffaa;
+    }
+
+    .bot-container {
+      margin: 40px auto;
+      max-width: 900px;
+      padding: 0 20px;
+      animation: fadeInUp 1.2s ease-in-out forwards;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .footer {
+  background: #1a1a1a;
+  color: #ccc;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+
+.footer a {
+  color: #8f94fb;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="hero">
+    <img src="logo-transparent.png" alt="TruBiome Logo" />
+    <div class="tagline">Precision AI guidance for smarter gut health decisions.</div>
+    <a href="#bot" class="cta">Book a Demo</a>
+  </div>
+  
+<section id="how-it-works" style="padding: 60px 20px; background-color: #ffffff; text-align: center;">
+  <h2 style="font-size: 2rem; margin-bottom: 30px;">How It Works</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+    
+    <div style="max-width: 250px;">
+      <div style="font-size: 2rem;">💬</div>
+      <h3 style="margin-top: 10px;">1. Input Symptoms</h3>
+      <p style="font-size: 0.95rem;">Users describe what they’re feeling — bloating, brain fog, skin issues, etc.</p>
+    </div>
+
+    <div style="max-width: 250px;">
+      <div style="font-size: 2rem;">🧠</div>
+      <h3 style="margin-top: 10px;">2. AI Analysis</h3>
+      <p style="font-size: 0.95rem;">TrueBiome.AI processes inputs using functional medicine logic.</p>
+    </div>
+
+    <div style="max-width: 250px;">
+      <div style="font-size: 2rem;">🧴</div>
+      <h3 style="margin-top: 10px;">3. Product Match</h3>
+      <p style="font-size: 0.95rem;">It recommends the best products from your company’s catalog — instantly.</p>
+    </div>
+    
+  </div>
+</section>
+
+  <div class="bot-container" id="bot">
+    <iframe src="https://trubiome.ai/"></iframe>
+  </div>
+  <section style="padding: 60px 20px; background: #fff;">
+  <h2 style="text-align: center;">Why TruBiome.AI</h2>
+  <p style="max-width: 700px; margin: 20px auto; text-align: center; font-size: 1.1rem;">
+    We built TruBiome.AI to help supplement brands and wellness businesses eliminate guesswork.
+    Our AI chatbot recommends your catalog’s products with precision, using functional medicine
+    logic based on your customers’ symptoms. It's smart. It's fast. It's built for better outcomes.
+  </p>
+</section>
+</body>
+<section id="scenarios" style="padding: 60px 20px; background-color: #f9f9fb; text-align: center;">
+  <h2 style="font-size: 2rem; margin-bottom: 20px;">🔍 Demo Scenarios</h2>
+  <p style="max-width: 600px; margin: 0 auto 40px;">See how TrueBiome.AI helps businesses guide their customers to the right supplement choices, based on symptom input.</p>
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+    <div style="background: white; border-radius: 20px; padding: 20px; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+      <h3 style="font-size: 1.2rem; margin-bottom: 10px;">🧠 Brain Fog & Fatigue</h3>
+      <p style="font-size: 0.95rem;">Customer reports brain fog and low energy. AI recommends adaptogenic and mitochondrial support products from your catalog.</p>
+    </div>
+
+    <div style="background: white; border-radius: 20px; padding: 20px; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+      <h3 style="font-size: 1.2rem; margin-bottom: 10px;">🦠 Bloating & Gas</h3>
+      <p style="font-size: 0.95rem;">Customer describes digestive discomfort. AI suggests antimicrobial and gut-repair formulas based on your available SKUs.</p>
+    </div>
+
+    <div style="background: white; border-radius: 20px; padding: 20px; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+      <h3 style="font-size: 1.2rem; margin-bottom: 10px;">🤧 Skin & Allergy Support</h3>
+      <p style="font-size: 0.95rem;">Customer has eczema and food sensitivities. AI suggests histamine-regulating products and detox support from your brand.</p>
+    </div>
+  </div>
+<section style="padding: 60px 20px; background-color: #f9f9fb;">
+  <h2 style="text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 40px;">Built For</h2>
+  <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; text-align: center;">
+    
+    <div style="max-width: 250px;">
+      <div style="font-size: 2rem; line-height: 1;">🧪</div>
+      <h3>Supplement Companies</h3>
+      <p>Transform your catalog into AI-powered product recommendations.</p>
+    </div>
+
+    <div style="max-width: 250px;">
+      <div style="font-size: 2rem; line-height: 1;">🏥</div>
+      <h3>Clinics</h3>
+      <p>Offer intelligent support tools for patient symptom review.</p>
+    </div>
+
+    <div style="max-width: 250px;">
+      <div style="font-size: 2rem; line-height: 1;">🛒</div>
+      <h3>E-Commerce Brands</h3>
+      <p>Boost conversions with precision-guided wellness suggestions.</p>
+    </div>
+
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 TruBiome.AI. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="mailto:asadeghi@trubiome.ai">Contact</a>
+      <a href="https://www.linkedin.com/company/trubiome-ai/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+</html>
