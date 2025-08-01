@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XVVPJZXGPV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XVVPJZXGPV');
+</script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -130,7 +139,21 @@ html {
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
-  
+  <a href="https://calendly.com/asadeghi-trubiome" target="_blank" style="
+  background: linear-gradient(to right, #4f46e5, #9333ea);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  transition: transform 0.2s ease;
+" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  Request a Free AI Demo
+</a>
+
 </head>
 <body>
   <div class="hero">
@@ -163,11 +186,7 @@ html {
     
   </div>
 </section>
-<!-- Calendly badge widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/asadeghi-trubiome', text: 'Request a Free AI Demo for Your Brand', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
-<!-- Calendly badge widget end -->
+
   <div class="bot-container" id="bot">
     <iframe src="https://trubiome-ai-chatbot.vercel.app/"></iframe>
   </div>
