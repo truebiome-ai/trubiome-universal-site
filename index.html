@@ -30,64 +30,55 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://trubiome.ai/" />
   <link rel="icon" type="image/png" href="favicon.png" />
-<head>
-  <meta charset="UTF-8" />
-  <title>TruBiome.AI</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+      "Inter", sans-serif;
+    color: #111827;
+  }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Inter", sans-serif;
-      color: #111827;
-    }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 60px; /* smaller bottom padding = less big gap */
+    background: linear-gradient(90deg, #33b5ff, #6366f1, #a855f7);
+    border-radius: 0 0 80px 80px;
+    text-align: center;
+    color: #ffffff;
+  }
 
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 70px 20px 40px;
-      background: linear-gradient(90deg, #33b5ff, #6366f1, #a855f7);
-      border-radius: 0 0 64px 64px;
-      text-align: center;
-      color: #ffffff;
-    }
+  .hero img {
+    width: 140px;
+    max-width: 40vw;
+    margin-bottom: 24px;
+  }
 
-    .hero img {
-      width: 140px;
-      max-width: 40vw;
-      margin-bottom: 20px;
-    }
+  .tagline {
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
 
-    .hero-title {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
+  .cta {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
 
-    .tagline {
-      font-size: 1.05rem;
-      font-weight: 500;
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 22px;
-      padding: 11px 26px;
-      border-radius: 999px;
-      background: #2563eb;
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    .cta:hover {
-      background: #4f46e5;
-    }
+  .cta:hover {
+    background: #4f46e5;
+  }
 
     .how-it-works {
       padding: 40px 20px 70px;
@@ -105,34 +96,21 @@
   <!-- HERO -->
   <section class="hero">
     <img src="logo-transparent.png" alt="TruBiome Logo" />
-    <div class="hero-title">TruBiome.AI</div>
     <div class="tagline">
       Precision AI guidance for smarter gut health decisions.
     </div>
     <a href="demo.html" class="cta">Book a Demo</a>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section id="how-it-works" class="how-it-works">
-    <h2>How It Works</h2>
-
-    <!-- keep your existing three-step layout here if you like it -->
-    <div style="
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: center;
-      max-width: 900px;
-      margin: 0 auto;
-    ">
-      <div style="max-width: 260px;">
-        <div style="font-size: 2rem; line-height: 1;">💬</div>
-        <h3>1. Input Symptoms</h3>
-        <p>
-          Users describe what they’re feeling — bloating, brain fog, skin
-          issues, etc.
-        </p>
-      </div>
+  </div>
+  
+<section id="how-it-works" style="padding: 40px 20px 80px; background-color: #ffffff; text-align: center;">
+  <h2 style="font-size: 2rem; margin-bottom: 30px;">How It Works</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+    
+    <div style="max-width: 250px;">
+      <div style="font-size: 2rem;">💬</div>
+      <h3 style="margin-top: 10px;">1. Input Symptoms</h3>
+      <p style="font-size: 0.95rem;">Users describe what they’re feeling — bloating, brain fog, skin issues, etc.</p>
+    </div>
 
       <div style="max-width: 260px;">
         <div style="font-size: 2rem; line-height: 1;">🧠</div>
@@ -216,7 +194,7 @@
 </section>
 <footer class="footer">
   <div class="footer-content">
-    <p>© 2025 TruBiome.AI — A product of TruBiome AI LLC</p>
+    <p>© 2025 TruBiome.AI. All rights reserved.</p>
     <div class="footer-links">
       <a href="mailto:asadeghi@trubiome.ai">Contact</a>
       <a href="https://www.linkedin.com/company/trubiome-ai/" target="_blank">LinkedIn</a>
