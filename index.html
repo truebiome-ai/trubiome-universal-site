@@ -110,11 +110,10 @@
   margin: 0 auto 60px;
 }
 
-/* Left brand: favicon + text */
 .hero-brand {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: center;   /* keeps them aligned perfectly */
+  gap: 12px;             /* slightly bigger spacing */
 }
 
 .hero-favicon {
@@ -126,9 +125,12 @@
 
 
 .hero-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 700;
+  line-height: 1;    /* tighten vertical alignment */
+  margin-top: 2px;   /* lifts text slightly to match icon center */
 }
+
 
 /* Center nav links */
 .hero-nav {
