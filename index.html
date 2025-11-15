@@ -42,86 +42,97 @@
       color: #111827;
     }
 
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 70px 20px 40px;
-      background: linear-gradient(90deg, #33b5ff, #6366f1, #a855f7);
-      border-radius: 0 0 64px 64px;
-      text-align: center;
-      color: #ffffff;
-    }
+  .hero {
+    text-align: center;
+    padding: 120px 20px 100px; 
+    background: linear-gradient(135deg, #6ac6ff, #a66bff);
+    border-bottom-left-radius: 140px;
+    border-bottom-right-radius: 140px;
+    color: white;
+  }
 
-    .hero img {
-      width: 140px;
-      max-width: 40vw;
-      margin-bottom: 20px;
-    }
+  .hero-logo {
+    width: 160px;
+    margin-bottom: 20px;
+  }
 
-    .hero-title {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
+  .hero-title {
+    font-size: 3rem;
+    margin-top: 10px;
+  }
 
-    .tagline {
-      font-size: 1.05rem;
-      font-weight: 500;
-    }
+  .hero-tagline {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
 
-    .cta {
-      display: inline-block;
-      margin-top: 22px;
-      padding: 11px 26px;
-      border-radius: 999px;
-      background: #2563eb;
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-    }
+  .cta {
+    display: inline-block;
+    padding: 12px 28px;
+    background: white;
+    color: #4a3aff;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+  }
 
-    .cta:hover {
-      background: #4f46e5;
-    }
+  .cta:hover {
+    background: #f5f5ff;
+  }
 
-    .how-it-works {
-      padding: 40px 20px 70px;
-      text-align: center;
-    }
+.how-it-works {
+    padding: 100px 20px;
+    text-align: center;
+  }
 
-    .how-it-works h2 {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-    .how-it-works {
-      padding: 40px 20px 70px;
-      text-align: center;
-    }
+  .how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
 
-    .how-it-works h2 {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-    }
+  .how-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .how-item {
+    max-width: 260px;
+  }
+
+  .emoji {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  .how-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .how-item p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    opacity: 0.9;
+  }
   </style>
   
   
 </head>
 <body>
-  <!-- HERO -->
-  <section class="hero">
-  <!-- HERO -->
-  <section class="hero">
-    <img src="logo-transparent.png" alt="TruBiome Logo" />
-    <div class="hero-title">TruBiome.AI</div>
-    <div class="tagline">
-      Precision AI guidance for smarter gut health decisions.
-    </div>
-    <a href="demo.html" class="cta">Book a Demo</a>
-  </section>
+ <!-- HERO -->
+<section class="hero">
+  <img src="logo-transparent.png" alt="TruBiome Logo" class="hero-logo" />
+
+  <h1 class="hero-title">TruBiome.AI</h1>
+  <p class="hero-tagline">Precision AI guidance for smarter gut health decisions.</p>
+
+  <a href="demo.html" class="cta">Book a Demo</a>
+</section>
 
   <!-- HOW IT WORKS -->
   <section id="how-it-works" class="how-it-works">
