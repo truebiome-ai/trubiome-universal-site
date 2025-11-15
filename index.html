@@ -34,6 +34,46 @@
   <meta charset="UTF-8" />
 
   <style>
+    /* Restore rounded gradient card look */
+.hero {
+  background: linear-gradient(135deg, #6ac6ff, #a66bff);
+  padding: 80px 20px;
+  border-radius: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Logo closer to text */
+.hero-logo {
+  width: 210px;
+  margin-bottom: 6px; /* closer spacing */
+}
+
+/* Subtle animation */
+.hero, 
+.hero-logo, 
+.hero-tagline, 
+.cta {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.hero-logo { animation-delay: 0.1s; }
+.hero-tagline { animation-delay: 0.25s; }
+.cta { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
