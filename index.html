@@ -249,6 +249,67 @@
   line-height: 1.6;
   opacity: 0.9;
 }
+/* WHO IT'S BUILT FOR */
+.audiences {
+  padding: 90px 20px;
+  background-color: #f9fafb;
+}
+
+.audiences-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.audiences-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.audiences-subtitle {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.audiences-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.audience-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px 20px 24px;
+  max-width: 250px;
+  flex: 1 1 220px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.audience-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.audience-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.audience-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
   </style>
 </head>
 
@@ -373,31 +434,50 @@
     </div>
   </section>
 
-  <!-- BUILT FOR -->
-  <section style="padding: 60px 20px; background-color: #f9f9fb;">
-    <h2 style="text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 40px;">Built For</h2>
-    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; text-align: center;">
-      
-      <div style="max-width: 250px;">
-        <div style="font-size: 2rem; line-height: 1;">🧪</div>
+  <!-- WHO IT'S BUILT FOR -->
+<section class="audiences">
+  <div class="audiences-inner">
+    <h2 class="audiences-title">Built for modern wellness businesses.</h2>
+    <p class="audiences-subtitle">
+      TruBiome.AI plugs into the brands that need clear, trustworthy supplement guidance the most.
+    </p>
+
+    <div class="audiences-grid">
+      <div class="audience-card">
+        <div class="audience-icon">🧪</div>
         <h3>Supplement Companies</h3>
-        <p>Transform your catalog into AI-powered product recommendations.</p>
+        <p>
+          Turn a large catalog into simple, AI-guided product journeys that reduce overwhelm and increase conversions.
+        </p>
       </div>
 
-      <div style="max-width: 250px;">
-        <div style="font-size: 2rem; line-height: 1;">🏥</div>
-        <h3>Clinics</h3>
-        <p>Offer intelligent support tools for patient symptom review.</p>
+      <div class="audience-card">
+        <div class="audience-icon">🏥</div>
+        <h3>Functional Medicine Clinics</h3>
+        <p>
+          Give patients symptom-based supplement guidance between visits while staying aligned with your clinical approach.
+        </p>
       </div>
 
-      <div style="max-width: 250px;">
-        <div style="font-size: 2rem; line-height: 1;">🛒</div>
-        <h3>E-Commerce Brands</h3>
-        <p>Boost conversions with precision-guided wellness suggestions.</p>
+      <div class="audience-card">
+        <div class="audience-icon">🧬</div>
+        <h3>Lab Testing & Diagnostics</h3>
+        <p>
+          Help customers interpret markers and connect results to targeted supplement and lifestyle recommendations.
+        </p>
       </div>
 
+      <div class="audience-card">
+        <div class="audience-icon">🛒</div>
+        <h3>E-commerce Wellness Brands</h3>
+        <p>
+          Offer personalized supplement guidance on-site so shoppers move from “I’m not sure” to “Add to cart” faster.
+        </p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- FOOOOOTER -->
   <footer class="footer" style="padding: 20px 20px; background:#fff; border-top:1px solid #e5e7eb;">
