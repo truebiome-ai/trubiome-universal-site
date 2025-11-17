@@ -2,183 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Who We Serve | TruBiome.AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Who We Serve – TruBiome.AI</title>
 
-  <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 
   <style>
     body {
       margin: 0;
-      font-family: Inter, system-ui, sans-serif;
-      background: #f7f7fa;
-      color: #111;
+      font-family: Inter, sans-serif;
+      background: #f9fafb;
+      color: #111827;
     }
 
-    /* GLOBAL CONTAINER */
-    .container {
-      max-width: 1200px;
+    /* Page wrapper */
+    .page-container {
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 40px 20px;
     }
 
-    /* HEADER (matches your site) */
-    header {
-      padding: 24px 0;
-    }
-
-    .hero-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .hero-nav a {
-      margin-left: 20px;
-      color: #333;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .hero-nav a.nav-active {
-      color: #5a3fff;
-      font-weight: 700;
-    }
-
-    /* ----- MAIN HERO TITLE ----- */
-    .hero-title-block {
+    /* Heading Section */
+    .serve-header {
       text-align: center;
-      margin-top: 40px;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
+      margin-top: 20px;
     }
 
-    .hero-title-block h1 {
-      font-size: 3rem;
+    .serve-header h1 {
+      font-size: 2.8rem;
       font-weight: 800;
-      color: #111;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
-    .hero-title-block p {
-      color: #555;
+    .serve-header p {
       font-size: 1.2rem;
-      max-width: 650px;
+      opacity: 0.8;
+      max-width: 700px;
       margin: 0 auto;
     }
 
-    /* ----- FOUR CARD GRID ----- */
-    .segment-grid {
-      margin-top: 60px;
+    /* GRID — 4 CARDS IN 1 ROW */
+    .serve-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
+      gap: 40px;
+      margin-top: 60px;
     }
 
-    .segment-card {
-      background: #fff;
-      padding: 32px;
-      border-radius: 22px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-      transition: transform .25s ease, box-shadow .25s ease;
+    /* CARD STYLE */
+    .serve-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .segment-card:hover {
+    .serve-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.1);
     }
 
-    .segment-card h3 {
-      margin-top: 12px;
+    .serve-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
       margin-bottom: 12px;
-      font-size: 1.25rem;
-      font-weight: 700;
     }
 
-    .segment-card p {
-      color: #444;
+    .serve-card p,
+    .serve-card li {
+      font-size: 0.98rem;
       line-height: 1.5;
-      margin-bottom: 16px;
+      opacity: 0.9;
     }
 
-    .segment-card ul {
-      padding-left: 20px;
-      margin: 12px 0 0;
-    }
-
-    .segment-card ul li {
-      margin-bottom: 6px;
-      color: #444;
-    }
-
-    /* ----- DEEP DIVE SECTION ----- */
-    .deep-dive {
-      margin-top: 120px;
-      margin-bottom: 120px;
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .deep-dive-text h2 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-
-    .deep-dive-text p {
-      font-size: 1rem;
-      line-height: 1.55;
-      margin-bottom: 18px;
-      color: #444;
-    }
-
-    .deep-dive-text ul {
-      padding-left: 22px;
+    .serve-card ul {
+      padding-left: 18px;
       margin-top: 12px;
     }
 
-    .deep-dive-text li {
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .deep-dive-card {
-      background: #fff;
-      padding: 32px;
-      border-radius: 22px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    }
-
-    .deep-dive-card h3 {
-      margin-top: 0;
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .deep-dive-card ul li {
-      margin-bottom: 8px;
-    }
-
-    /* Responsive */
-    @media (max-width: 1000px) {
-      .segment-grid {
+    /* MOBILE */
+    @media (max-width: 1100px) {
+      .serve-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .deep-dive {
-        grid-template-columns: 1fr;
+        gap: 25px;
       }
     }
 
-    @media (max-width: 600px) {
-      .segment-grid {
+    @media (max-width: 700px) {
+      .serve-grid {
         grid-template-columns: 1fr;
       }
-
-      .hero-title-block h1 {
-        font-size: 2.3rem;
+      .serve-header h1 {
+        font-size: 2.2rem;
       }
     }
   </style>
@@ -186,106 +103,63 @@
 
 <body>
 
-<!-- HEADER -->
-<header class="container">
-  <div class="hero-header">
-    <div class="hero-brand" style="display:flex;align-items:center;">
-      <img src="/favicon.png" style="width:33px;margin-right:8px;">
-      <span style="font-size:1.3rem;font-weight:700;">TruBiome.AI</span>
+  <div class="page-container">
+
+    <!-- HEADER -->
+    <div class="serve-header">
+      <h1>Who We Serve</h1>
+      <p>TruBiome.AI supports the modern wellness ecosystem by providing AI-guided supplement recommendations tailored to each customer or patient.</p>
     </div>
 
-    <nav class="hero-nav">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/product" class="nav-link">Product</a>
-      <a href="/who-we-serve" class="nav-link nav-active">Who We Serve</a>
-      <a href="/pricing" class="nav-link">Pricing</a>
-      <a href="/demo" class="nav-link">Demo</a>
-    </nav>
+    <!-- GRID OF 4 CARDS -->
+    <div class="serve-grid">
+
+      <!-- Card 1 -->
+      <div class="serve-card">
+        <h3>Supplement Companies</h3>
+        <p>Help customers move from vague symptoms to specific formulas in your catalog without overwhelm.</p>
+        <ul>
+          <li>Guided “What should I take?” experiences.</li>
+          <li>AI support on collection + product detail pages.</li>
+          <li>Education that reduces support tickets.</li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="serve-card">
+        <h3>Functional Medicine Clinics</h3>
+        <p>Extend your clinical reasoning into an AI assistant that supports patients between visits.</p>
+        <ul>
+          <li>Pre-visit symptom intake guidance.</li>
+          <li>Supplement education aligned with your approach.</li>
+          <li>Support tools for health coaches & staff.</li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="serve-card">
+        <h3>Lab Testing & Diagnostics</h3>
+        <p>Translate complex markers into actionable supplement + lifestyle suggestions.</p>
+        <ul>
+          <li>Help users understand what their results mean.</li>
+          <li>Suggest next-step tests or relevant products.</li>
+          <li>Bridge the gap between data and action.</li>
+        </ul>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="serve-card">
+        <h3>E-commerce Wellness Brands</h3>
+        <p>Offer personalized supplement guidance so shoppers feel confident clicking “add to cart.”</p>
+        <ul>
+          <li>On-site AI concierge for new visitors.</li>
+          <li>Guided bundles based on symptom patterns.</li>
+          <li>Support for both DTC + practitioner lines.</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
-</header>
-
-<!-- TITLE -->
-<section class="hero-title-block" data-aos="fade-up">
-  <h1>Who We Serve</h1>
-  <p>TruBiome.AI delivers precision, symptom-aware guidance for supplement brands, clinics, labs, and wellness businesses.</p>
-</section>
-
-<!-- FOUR CARD GRID -->
-<section class="container segment-grid">
-
-  <div class="segment-card" data-aos="fade-up" data-aos-delay="0">
-    <img src="/value-section.png" style="width:38px;">
-    <h3>Supplement Companies</h3>
-    <p>Help shoppers move from vague symptoms to precise formulas in your catalog—without overwhelm.</p>
-    <ul>
-      <li>Guided “What should I take?” flows.</li>
-      <li>AI support on product + collection pages.</li>
-      <li>Education that reduces support tickets.</li>
-    </ul>
-  </div>
-
-  <div class="segment-card" data-aos="fade-up" data-aos-delay="100">
-    <img src="/value-section.png" style="width:38px;">
-    <h3>Functional Medicine Clinics</h3>
-    <p>Extend your clinical reasoning into an AI assistant that supports patients between visits.</p>
-    <ul>
-      <li>Pre-visit intake guidance.</li>
-      <li>Supplement education aligned with your approach.</li>
-      <li>Support tools for coaches + staff.</li>
-    </ul>
-  </div>
-
-  <div class="segment-card" data-aos="fade-up" data-aos-delay="200">
-    <img src="/value-section.png" style="width:38px;">
-    <h3>Lab Testing & Diagnostics</h3>
-    <p>Translate complex markers into clear, next-step supplement and lifestyle suggestions.</p>
-    <ul>
-      <li>Help users understand markers.</li>
-      <li>Suggest follow-up tests or products.</li>
-      <li>Bridge the gap between data + action.</li>
-    </ul>
-  </div>
-
-  <div class="segment-card" data-aos="fade-up" data-aos-delay="300">
-    <img src="/value-section.png" style="width:38px;">
-    <h3>E-commerce Wellness Brands</h3>
-    <p>Offer personalized guidance so shoppers feel confident clicking “add to cart.”</p>
-    <ul>
-      <li>AI concierge for new visitors.</li>
-      <li>Guided bundles based on symptoms.</li>
-      <li>Support for DTC & practitioner lines.</li>
-    </ul>
-  </div>
-
-</section>
-
-<!-- DEEP DIVE SECTION -->
-<section class="container deep-dive">
-
-  <div class="deep-dive-text" data-aos="fade-right">
-    <h2>Turn your catalog into a guided experience.</h2>
-    <p>Most buyers don’t know where to begin. TruBiome.AI helps them explain what they’re feeling and maps those symptoms to your products, protocols, or bundles.</p>
-
-    <ul>
-      <li>Position hero products clearly for symptom patterns.</li>
-      <li>Reduce “analysis paralysis” across your site.</li>
-      <li>Support both practitioner-only and consumer lines.</li>
-    </ul>
-  </div>
-
-  <div class="deep-dive-card" data-aos="fade-left">
-    <h3>Common Implementations</h3>
-    <ul>
-      <li>“Find my protocol” quiz or homepage flow.</li>
-      <li>AI widget for key product pages.</li>
-      <li>Post-purchase guidance to keep customers on track.</li>
-    </ul>
-  </div>
-
-</section>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({ duration: 800 });</script>
 
 </body>
 </html>
