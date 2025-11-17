@@ -2,164 +2,510 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Who We Serve – TruBiome.AI</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 
   <style>
     body {
       margin: 0;
-      font-family: Inter, sans-serif;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
       background: #f9fafb;
       color: #111827;
     }
 
-    /* Page wrapper */
-    .page-container {
-      max-width: 1300px;
+    a { color: inherit; }
+
+    /* TOP GRADIENT HEADER */
+    .hero-shell {
+      background: linear-gradient(135deg, #6ac6ff, #a66bff);
+      padding: 18px 20px 50px;
+      border-radius: 0 0 40px 40px;
+      max-width: 1100px;
+      margin: 0 auto 40px;
+      color: #ffffff;
+    }
+
+    .hero-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1060px;
+      margin: 0 auto 22px;
+    }
+
+    .hero-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-favicon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      object-fit: contain;
+    }
+
+    .hero-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .hero-nav {
+      display: flex;
+      gap: 24px;
+      font-size: 0.95rem;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .nav-link:hover { text-decoration: underline; }
+
+    .nav-active { font-weight: 700; }
+
+    .nav-cta {
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.85);
+      text-decoration: none;
+      color: white;
+      font-size: 0.9rem;
+      background: rgba(15,23,42,0.08);
+    }
+
+    .nav-cta:hover {
+      background: rgba(15,23,42,0.18);
+    }
+
+    .hero-main {
+      max-width: 680px;
       margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    /* Heading Section */
-    .serve-header {
       text-align: center;
-      margin-bottom: 50px;
-      margin-top: 20px;
     }
 
-    .serve-header h1 {
-      font-size: 2.8rem;
+    .hero-heading {
+      font-size: 2.2rem;
       font-weight: 800;
       margin-bottom: 10px;
     }
 
-    .serve-header p {
-      font-size: 1.2rem;
-      opacity: 0.8;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    /* GRID — 4 CARDS IN 1 ROW */
-    .serve-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 40px;
-      margin-top: 60px;
-    }
-
-    /* CARD STYLE */
-    .serve-card {
-      background: white;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .serve-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.1);
-    }
-
-    .serve-card h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .serve-card p,
-    .serve-card li {
+    .hero-subtext {
       font-size: 0.98rem;
-      line-height: 1.5;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    /* MAIN CONTENT */
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      padding: 0 20px;
+    }
+
+    .intro-section {
+      max-width: 760px;
+      margin: 0 auto 40px;
+      text-align: center;
+      font-size: 0.98rem;
+      line-height: 1.7;
       opacity: 0.9;
     }
 
-    .serve-card ul {
+    .segment-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+
+    .segment-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 24px 22px 26px;
+      max-width: 320px;
+      flex: 1 1 260px;
+      box-shadow: 0 14px 35px rgba(15,23,42,0.08);
+      border: 1px solid rgba(148,163,184,0.25);
+    }
+
+    .segment-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .segment-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .segment-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin-bottom: 12px;
+    }
+
+    .segment-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .segment-list li {
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .segment-list li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      top: 0;
+      color: #6366f1;
+    }
+
+    /* DEEP DIVE SECTIONS */
+    .detail-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+      margin-bottom: 60px;
+    }
+
+    .detail-text {
+      flex: 1 1 340px;
+    }
+
+    .detail-heading {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .detail-sub {
+      font-size: 0.96rem;
+      line-height: 1.7;
+      opacity: 0.9;
+      margin-bottom: 14px;
+    }
+
+    .detail-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.93rem;
+    }
+
+    .detail-bullets li {
+      margin-bottom: 6px;
       padding-left: 18px;
-      margin-top: 12px;
+      position: relative;
+      line-height: 1.6;
     }
 
-    /* MOBILE */
-    @media (max-width: 1100px) {
-      .serve-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-      }
+    .detail-bullets li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      font-size: 0.8rem;
+      color: #22c55e;
     }
 
-    @media (max-width: 700px) {
-      .serve-grid {
-        grid-template-columns: 1fr;
+    .detail-tag {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.7;
+      margin-bottom: 4px;
+    }
+
+    .detail-panel {
+      flex: 1 1 320px;
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 18px 18px 20px;
+      box-shadow: 0 18px 45px rgba(15,23,42,0.08);
+      border: 1px solid rgba(148,163,184,0.25);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    .detail-panel h4 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    /* CTA BAND */
+    .bottom-cta {
+      margin-top: 20px;
+      padding: 32px 24px;
+      border-radius: 24px;
+      background: radial-gradient(circle at top left, #e0edff, #ffffff);
+      text-align: center;
+      box-shadow: 0 14px 35px rgba(15,23,42,0.08);
+      border: 1px solid rgba(148,163,184,0.3);
+    }
+
+    .bottom-cta h3 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .bottom-cta p {
+      font-size: 0.96rem;
+      max-width: 520px;
+      margin: 0 auto 18px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .bottom-cta a {
+      display: inline-block;
+      padding: 11px 22px;
+      border-radius: 999px;
+      background: #4f46e5;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .bottom-cta a:hover {
+      background: #4338ca;
+    }
+
+    /* FOOTER */
+    .footer {
+      padding: 18px 20px 26px;
+      border-top: 1px solid #e5e7eb;
+      background: #ffffff;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #4b5563;
+    }
+
+    .footer-links a:hover { text-decoration: underline; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-shell {
+        border-radius: 0 0 24px 24px;
+        padding: 14px 16px 40px;
       }
-      .serve-header h1 {
-        font-size: 2.2rem;
+
+      .hero-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .hero-heading {
+        font-size: 1.8rem;
       }
     }
   </style>
 </head>
-
 <body>
 
-  <div class="page-container">
+  <!-- HEADER -->
+  <header class="hero-shell">
+    <div class="hero-header">
+      <div class="hero-brand">
+        <img src="favicon.png" alt="TruBiome favicon" class="hero-favicon" />
+        <span class="hero-title">TruBiome.AI</span>
+      </div>
 
-    <!-- HEADER -->
-    <div class="serve-header">
-      <h1>Who We Serve</h1>
-      <p>TruBiome.AI supports the modern wellness ecosystem by providing AI-guided supplement recommendations tailored to each customer or patient.</p>
+      <nav class="hero-nav">
+        <a href="/home" class="nav-link">Home</a>
+        <a href="product.html" class="nav-link">Product</a>
+        <a href="who-we-serve.html" class="nav-link nav-active">Who We Serve</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="demo.html" class="nav-link">Demo</a>
+      </nav>
+
+      <a href="contact.html" class="nav-cta">Contact</a>
     </div>
 
-    <!-- GRID OF 4 CARDS -->
-    <div class="serve-grid">
+    <div class="hero-main">
+      <h1 class="hero-heading">Built for modern wellness businesses.</h1>
+      <p class="hero-subtext">
+        TruBiome.AI is designed for supplement brands, functional medicine clinics, labs, and wellness e-commerce
+        teams that want clear, trustworthy guidance baked into the customer journey.
+      </p>
+    </div>
+  </header>
 
-      <!-- Card 1 -->
-      <div class="serve-card">
-        <h3>Supplement Companies</h3>
-        <p>Help customers move from vague symptoms to specific formulas in your catalog without overwhelm.</p>
-        <ul>
+  <!-- MAIN PAGE CONTENT -->
+  <main class="page-wrapper">
+    <!-- INTRO -->
+    <section class="intro-section">
+      TruBiome.AI can slot into a single product page or sit across your entire funnel.
+      Below are the types of teams we partner with most often and how they use our AI
+      to drive clarity, trust, and revenue.
+    </section>
+
+    <!-- SEGMENT CARDS -->
+    <section class="segment-grid">
+      <article class="segment-card">
+        <div class="segment-icon">🧪</div>
+        <h2 class="segment-title">Supplement Companies</h2>
+        <p class="segment-text">
+          Help customers move from vague symptoms to specific formulas in your catalog without feeling overwhelmed.
+        </p>
+        <ul class="segment-list">
           <li>Guided “What should I take?” experiences.</li>
-          <li>AI support on collection + product detail pages.</li>
+          <li>AI support on collection or product detail pages.</li>
           <li>Education that reduces support tickets.</li>
         </ul>
-      </div>
+      </article>
 
-      <!-- Card 2 -->
-      <div class="serve-card">
-        <h3>Functional Medicine Clinics</h3>
-        <p>Extend your clinical reasoning into an AI assistant that supports patients between visits.</p>
-        <ul>
+      <article class="segment-card">
+        <div class="segment-icon">🏥</div>
+        <h2 class="segment-title">Functional Medicine Clinics</h2>
+        <p class="segment-text">
+          Extend your clinical reasoning into an AI assistant that supports patients between visits.
+        </p>
+        <ul class="segment-list">
           <li>Pre-visit symptom intake guidance.</li>
           <li>Supplement education aligned with your approach.</li>
-          <li>Support tools for health coaches & staff.</li>
+          <li>Support tools for health coaches and staff.</li>
         </ul>
-      </div>
+      </article>
 
-      <!-- Card 3 -->
-      <div class="serve-card">
-        <h3>Lab Testing & Diagnostics</h3>
-        <p>Translate complex markers into actionable supplement + lifestyle suggestions.</p>
-        <ul>
-          <li>Help users understand what their results mean.</li>
+      <article class="segment-card">
+        <div class="segment-icon">🧬</div>
+        <h2 class="segment-title">Lab Testing & Diagnostics</h2>
+        <p class="segment-text">
+          Translate complex markers into next-step supplement and lifestyle suggestions.
+        </p>
+        <ul class="segment-list">
+          <li>Help users understand what results may indicate.</li>
           <li>Suggest next-step tests or relevant products.</li>
           <li>Bridge the gap between data and action.</li>
         </ul>
-      </div>
+      </article>
 
-      <!-- Card 4 -->
-      <div class="serve-card">
-        <h3>E-commerce Wellness Brands</h3>
-        <p>Offer personalized supplement guidance so shoppers feel confident clicking “add to cart.”</p>
-        <ul>
+      <article class="segment-card">
+        <div class="segment-icon">🛒</div>
+        <h2 class="segment-title">E-commerce Wellness Brands</h2>
+        <p class="segment-text">
+          Offer personalized guidance so shoppers feel confident clicking “add to cart.”
+        </p>
+        <ul class="segment-list">
           <li>On-site AI concierge for new visitors.</li>
           <li>Guided bundles based on symptom patterns.</li>
-          <li>Support for both DTC + practitioner lines.</li>
+          <li>Support for both DTC and practitioner lines.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- DEEP DIVES -->
+    <section class="detail-section">
+      <div class="detail-text">
+        <div class="detail-tag">Supplement brands</div>
+        <h2 class="detail-heading">Turn a crowded catalog into a guided experience.</h2>
+        <p class="detail-sub">
+          Most buyers don’t know where to start. TruBiome.AI helps them describe what they’re feeling and then maps
+          those symptoms to the right products, protocols, or bundles in your line.
+        </p>
+        <ul class="detail-bullets">
+          <li>Position your hero products clearly for common symptom patterns.</li>
+          <li>Reduce “analysis paralysis” on collection and search pages.</li>
+          <li>Support both consumer-facing and practitioner-only SKUs.</li>
         </ul>
       </div>
 
+      <aside class="detail-panel">
+        <h4>Common implementations</h4>
+        <p>
+          • “Find my protocol” flow on your home or quiz page.<br/>
+          • AI widget on key product or bundle pages.<br/>
+          • Post-purchase guidance that keeps customers on track.
+        </p>
+      </aside>
+    </section>
+
+    <section class="detail-section">
+      <div class="detail-text">
+        <div class="detail-tag">Clinics & labs</div>
+        <h2 class="detail-heading">Support clinical work without replacing it.</h2>
+        <p class="detail-sub">
+          TruBiome.AI is built to complement—not override—clinical judgment. It gives patients structured,
+          symptom-based guidance while staying inside guardrails you define.
+        </p>
+        <ul class="detail-bullets">
+          <li>Capture better symptom narratives before visits.</li>
+          <li>Offer “between visit” education that reinforces your plans.</li>
+          <li>Connect lab markers to supplement categories you already use.</li>
+        </ul>
+      </div>
+
+      <aside class="detail-panel">
+        <h4>How clinics use TruBiome.AI</h4>
+        <p>
+          • As a front-door triage tool on the clinic site.<br/>
+          • Inside patient portals for supplement questions.<br/>
+          • As a training layer for new staff and coaches.
+        </p>
+      </aside>
+    </section>
+
+    <!-- CTA -->
+    <section class="bottom-cta">
+      <h3>Not sure which plan fits your model?</h3>
+      <p>
+        Whether you’re selling direct-to-consumer, through practitioners, or powering a lab platform,
+        we can tailor TruBiome.AI to your workflow and product stack.
+      </p>
+      <a href="contact.html">Talk with us about your use case</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2025 TruBiome.AI. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="mailto:asadeghi@trubiome.ai">Contact</a>
+        <a href="https://www.linkedin.com/company/trubiome-ai/" target="_blank">LinkedIn</a>
+      </div>
     </div>
-  </div>
+  </footer>
 
 </body>
 </html>
