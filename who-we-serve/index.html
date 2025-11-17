@@ -338,6 +338,54 @@
         font-size: 1.8rem;
       }
     }
+    @keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes ctaPulse {
+  0% {
+    box-shadow: 0 14px 35px rgba(15,23,42,0.08);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 20px 55px rgba(79,70,229,0.18);
+    transform: translateY(-2px);
+  }
+  100% {
+    box-shadow: 0 14px 35px rgba(15,23,42,0.08);
+    transform: translateY(0);
+  }
+}
+
   </style>
 </head>
 <body>
