@@ -17,11 +17,11 @@
 
     a { color: inherit; }
 
-    /* TOP GRADIENT HEADER */
+   /* TOP HERO BAR (matches home style but flatter) */
     .hero-shell {
       background: linear-gradient(135deg, #6ac6ff, #a66bff);
-      padding: 18px 20px 50px;
       border-radius: 0 0 40px 40px;
+      padding: 18px 20px 50px;
       max-width: 1100px;
       margin: 0 auto 40px;
       color: #ffffff;
@@ -45,7 +45,9 @@
       width: 32px;
       height: 32px;
       border-radius: 999px;
+      display: block;
       object-fit: contain;
+      margin-top: -2px; /* tiny optical adjustment */
     }
 
     .hero-title {
@@ -61,43 +63,49 @@
 
     .nav-link {
       text-decoration: none;
-      color: rgba(255,255,255,0.9);
+      color: rgba(255, 255, 255, 0.9);
     }
 
-    .nav-link:hover { text-decoration: underline; }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
 
-    .nav-active { font-weight: 700; }
+    .nav-active {
+      font-weight: 700;
+    }
 
     .nav-cta {
       padding: 8px 18px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.85);
+      border: 1px solid rgba(255, 255, 255, 0.85);
       text-decoration: none;
       color: white;
       font-size: 0.9rem;
-      background: rgba(15,23,42,0.08);
+      background: rgba(15, 23, 42, 0.08);
     }
 
     .nav-cta:hover {
-      background: rgba(15,23,42,0.18);
+      background: rgba(15, 23, 42, 0.18);
     }
 
-    .hero-main {
-      max-width: 680px;
+    .hero-pricing-main {
+      max-width: 650px;
       margin: 0 auto;
       text-align: center;
     }
 
-    .hero-heading {
+    .hero-pricing-title {
       font-size: 2.2rem;
       font-weight: 800;
       margin-bottom: 10px;
     }
 
-    .hero-subtext {
+    .hero-pricing-subtitle {
       font-size: 0.98rem;
       line-height: 1.6;
       opacity: 0.95;
+      max-width: 520px;
+      margin: 0 auto;
     }
 
     /* MAIN CONTENT */
