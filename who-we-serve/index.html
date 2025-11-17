@@ -116,14 +116,25 @@
       opacity: 0.9;
     }
 
-    .segment-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      justify-content: center;
-      margin-bottom: 60px;
-    }
+   .segment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* FOUR cards in one row */
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
+@media (max-width: 1200px) {
+    .segment-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+    }
+}
+
+@media (max-width: 700px) {
+    .segment-grid {
+        grid-template-columns: 1fr; /* 1 per row on mobile */
+    }
+}
     .segment-card {
       background: #ffffff;
       border-radius: 24px;
