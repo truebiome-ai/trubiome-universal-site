@@ -322,11 +322,17 @@
     .footer-links a:hover { text-decoration: underline; }
 
     /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .hero-shell {
-        border-radius: 0 0 24px 24px;
-        padding: 14px 16px 40px;
-      }
+  .hero-shell {
+  background: linear-gradient(135deg, #6ac6ff, #a66bff);
+  padding: 18px 20px 50px;
+  border-radius: 0 0 40px 40px;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  color: #ffffff;
+
+  animation: fadeUp 0.7s ease-out both;
+}
+
 
       .hero-header {
         flex-direction: column;
@@ -337,7 +343,7 @@
       .hero-heading {
         font-size: 1.8rem;
       }
-    }
+    
     @keyframes fadeUp {
   from {
     opacity: 0;
