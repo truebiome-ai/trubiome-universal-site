@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TruBiome.AI – Pricing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Inter", sans-serif;
+      color: #111827;
+      background: #f9fafb;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* TOP HERO BAR (matches home style but flatter) */
+    .hero-shell {
+      background: linear-gradient(135deg, #6ac6ff, #a66bff);
+      border-radius: 0 0 40px 40px;
+      padding: 18px 20px 50px;
+      max-width: 1100px;
+      margin: 0 auto 40px;
+      color: #ffffff;
+    }
+
+    .hero-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1060px;
+      margin: 0 auto 22px;
+    }
+
+    .hero-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-favicon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      display: block;
+      object-fit: contain;
+      margin-top: -2px; /* tiny optical adjustment */
+    }
+
+    .hero-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .hero-nav {
+      display: flex;
+      gap: 24px;
+      font-size: 0.95rem;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .nav-active {
+      font-weight: 700;
+    }
+
+    .nav-cta {
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      color: white;
+      font-size: 0.9rem;
+      background: rgba(15, 23, 42, 0.08);
+    }
+
+    .nav-cta:hover {
+      background: rgba(15, 23, 42, 0.18);
+    }
+
+    .hero-pricing-main {
+      max-width: 650px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-pricing-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .hero-pricing-subtitle {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      opacity: 0.95;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* MAIN PRICING SECTION */
+    .pricing-wrapper {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      padding: 0 20px;
+    }
+
+    .pricing-toggle-note {
+      text-align: center;
+      font-size: 0.85rem;
+      opacity: 0.7;
+      margin-bottom: 22px;
+    }
+
+    .pricing-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .plan-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 26px 22px 28px;
+      max-width: 320px;
+      flex: 1 1 260px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .plan-badge {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 8px;
+      opacity: 0.7;
+    }
+
+    .plan-badge.featured {
+      color: #1d4ed8;
+    }
+
+    .plan-name {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .plan-desc {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .plan-price-row {
+      margin-bottom: 16px;
+    }
+
+    .plan-price {
+      font-size: 1.9rem;
+      font-weight: 800;
+    }
+
+    .plan-price span {
+      font-size: 0.95rem;
+      font-weight: 500;
+      opacity: 0.8;
+      margin-left: 4px;
+    }
+
+    .plan-note {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 4px;
+    }
+
+    .plan-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px;
+      font-size: 0.9rem;
+    }
+
+    .plan-features li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+      line-height: 1.5;
+    }
+
+    .plan-features li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      font-size: 0.8rem;
+      color: #22c55e;
+    }
+
+    .plan-cta {
+      margin-top: 6px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .plan-cta.primary {
+      background: #4f46e5;
+      color: #ffffff;
+    }
+
+    .plan-cta.primary:hover {
+      background: #4338ca;
+    }
+
+    .plan-cta.outline {
+      background: #ffffff;
+      color: #111827;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+    }
+
+    .plan-cta.outline:hover {
+      background: #f9fafb;
+    }
+
+    .plan-footer {
+      font-size: 0.82rem;
+      opacity: 0.7;
+      margin-top: 10px;
+    }
+
+    /* FAQ SECTION */
+    .pricing-faq {
+      max-width: 900px;
+      margin: 0 auto 90px;
+      padding: 0 20px;
+    }
+
+    .pricing-faq h2 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    .faq-item {
+      margin-bottom: 18px;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* FOOTER SIMPLE */
+    .footer {
+      padding: 18px 20px 26px;
+      border-top: 1px solid #e5e7eb;
+      background: #ffffff;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #4b5563;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-shell {
+        border-radius: 0 0 24px 24px;
+        padding: 14px 16px 40px;
+      }
+
+      .hero-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .hero-nav {
+        flex-wrap: wrap;
+      }
+
+      .hero-pricing-title {
+        font-size: 1.7rem;
+      }
+
+      .pricing-wrapper {
+        margin-bottom: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP GRADIENT HEADER -->
+  <header class="hero-shell">
+    <div class="hero-header">
+      <div class="hero-brand">
+        <img src="favicon.png" alt="TruBiome favicon" class="hero-favicon" />
+        <span class="hero-title">TruBiome.AI</span>
+      </div>
+
+      <nav class="hero-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="product.html" class="nav-link">Product</a>
+        <a href="who-we-serve.html" class="nav-link">Who We Serve</a>
+        <a href="pricing.html" class="nav-link nav-active">Pricing</a>
+        <a href="demo.html" class="nav-link">Demo</a>
+      </nav>
+
+      <a href="demo.html" class="nav-cta">Book a Demo</a>
+    </div>
+
+    <div class="hero-pricing-main">
+      <h1 class="hero-pricing-title">Simple pricing for powerful AI.</h1>
+      <p class="hero-pricing-subtitle">
+        Choose a plan that fits your current volume and roadmap. All plans include symptom-to-product recommendations, functional medicine logic, and white-label branding.
+      </p>
+    </div>
+  </header>
+
+  <!-- PRICING GRID -->
+  <main>
+    <section class="pricing-wrapper">
+      <p class="pricing-toggle-note">
+        Pricing shown as a placeholder – update these numbers when you're ready.
+      </p>
+
+      <div class="pricing-grid">
+        <!-- STARTER -->
+        <article class="plan-card">
+          <div>
+            <div class="plan-badge">Starter</div>
+            <h2 class="plan-name">Pilot</h2>
+            <p class="plan-desc">
+              For emerging brands validating AI-guided supplement recommendations on a single site.
+            </p>
+
+            <div class="plan-price-row">
+              <div class="plan-price">
+                $499<span>/month</span>
+              </div>
+              <div class="plan-note">
+                + one-time setup fee for initial configuration.
+              </div>
+            </div>
+
+            <ul class="plan-features">
+              <li>Up to 10,000 AI-assisted sessions per month.</li>
+              <li>Single website or storefront.</li>
+              <li>Symptom-to-product recommendation logic.</li>
+              <li>Basic white-label branding (logo + colors).</li>
+              <li>Email support.</li>
+            </ul>
+          </div>
+
+          <div>
+            <a href="demo.html" class="plan-cta outline">Start with a demo</a>
+            <p class="plan-footer">Best for newer brands and clinics.</p>
+          </div>
+        </article>
+
+        <!-- GROWTH (FEATURED) -->
+        <article class="plan-card">
+          <div>
+            <div class="plan-badge featured">Most popular</div>
+            <h2 class="plan-name">Growth</h2>
+            <p class="plan-desc">
+              For established brands that want AI guidance deeply integrated into their customer journey.
+            </p>
+
+            <div class="plan-price-row">
+              <div class="plan-price">
+                $999<span>/month</span>
+              </div>
+              <div class="plan-note">
+                + one-time setup & onboarding.
+              </div>
+            </div>
+
+            <ul class="plan-features">
+              <li>Up to 50,000 AI-assisted sessions per month.</li>
+              <li>Multiple sites or funnels under one brand.</li>
+              <li>Advanced symptom & scenario mapping.</li>
+              <li>Deeper white-labeling & copy customization.</li>
+              <li>Priority support and optimization check-ins.</li>
+            </ul>
+          </div>
+
+          <div>
+            <a href="demo.html" class="plan-cta primary">Book a Growth plan demo</a>
+            <p class="plan-footer">Ideal for supplement brands ready to scale.</p>
+          </div>
+        </article>
+
+        <!-- ENTERPRISE -->
+        <article class="plan-card">
+          <div>
+            <div class="plan-badge">Enterprise</div>
+            <h2 class="plan-name">Enterprise</h2>
+            <p class="plan-desc">
+              For large brands, labs, and platforms that need custom workflows, integrations, or very high volumes.
+            </p>
+
+            <div class="plan-price-row">
+              <div class="plan-price">
+                Custom<span>/month</span>
+              </div>
+              <div class="plan-note">
+                Tailored pricing based on volume, integrations, and support.
+              </div>
+            </div>
+
+            <ul class="plan-features">
+              <li>Unlimited brands and domains under one umbrella.</li>
+              <li>Custom symptom models & protocol logic.</li>
+              <li>Deeper integrations (e-commerce, CRM, or lab systems).</li>
+              <li>Dedicated success & technical support.</li>
+              <li>Priority roadmap input.</li>
+            </ul>
+          </div>
+
+          <div>
+            <a href="mailto:asadeghi@trubiome.ai" class="plan-cta outline">Talk to sales</a>
+            <p class="plan-footer">Perfect for high-volume or multi-brand groups.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="pricing-faq">
+      <h2>Pricing FAQs</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">Do these prices include setup?</div>
+        <p class="faq-answer">
+          All plans include a one-time setup fee to configure TruBiome.AI with your product data, symptom logic, and branding. You can adjust that amount based on the complexity of each client.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I change the plans later?</div>
+        <p class="faq-answer">
+          Yes. These tiers are placeholders so you can show structure on sales calls. You can refine the pricing, limits, and features as you validate what works best with early customers.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What if a client needs something custom?</div>
+        <p class="faq-answer">
+          That's what the Enterprise plan is for. You can scope custom integrations, unique logic, or higher usage and quote accordingly.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2025 TruBiome.AI. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="mailto:asadeghi@trubiome.ai">Contact</a>
+        <a href="https://www.linkedin.com/company/trubiome-ai/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
