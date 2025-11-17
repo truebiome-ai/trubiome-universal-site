@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us – TruBiome.AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+    }
+
+    /* HEADER (matches your site) */
+    .hero-shell {
+      background: linear-gradient(135deg, #6ac6ff, #a66bff);
+      padding: 18px 20px 50px;
+      border-radius: 0 0 40px 40px;
+      max-width: 1100px;
+      margin: 0 auto 40px;
+      color: #ffffff;
+    }
+
+    .hero-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .hero-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-favicon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+
+    .hero-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .hero-nav {
+      display: flex;
+      gap: 24px;
+      font-size: 0.95rem;
+    }
+
+    .nav-link {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+    }
+
+    .nav-link:hover { text-decoration: underline; }
+
+    .nav-cta {
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.85);
+      text-decoration: none;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    /* MAIN CONTACT CONTENT */
+    .contact-wrapper {
+      max-width: 850px;
+      margin: 0 auto 80px;
+      padding: 0 20px;
+    }
+
+    .contact-title {
+      font-size: 2rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .contact-subtitle {
+      text-align: center;
+      font-size: 1rem;
+      opacity: 0.8;
+      max-width: 550px;
+      margin: 0 auto 40px;
+    }
+
+    .contact-card {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+      border: 1px solid #e5e7eb;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background: #4f46e5;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .submit-btn:hover {
+      background: #4338ca;
+    }
+
+    /* FOOTER */
+    .footer {
+      padding: 18px 20px 26px;
+      border-top: 1px solid #e5e7eb;
+      background: #ffffff;
+      margin-top: 60px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #4b5563;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .hero-shell { border-radius: 0 0 24px 24px; }
+      .hero-header { flex-direction: column; gap: 12px; }
+      .contact-card { padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="hero-shell">
+    <div class="hero-header">
+      <div class="hero-brand">
+        <img src="favicon.png" class="hero-favicon" alt="logo" />
+        <span class="hero-title">TruBiome.AI</span>
+      </div>
+
+      <nav class="hero-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="product.html" class="nav-link">Product</a>
+        <a href="who-we-serve.html" class="nav-link">Who We Serve</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="demo.html" class="nav-link">Demo</a>
+      </nav>
+
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+  </header>
+
+  <!-- CONTACT CONTENT -->
+  <main class="contact-wrapper">
+    <h1 class="contact-title">Contact Sales</h1>
+    <p class="contact-subtitle">
+      Interested in bringing TruBiome.AI to your brand?  
+      Fill out the form below and we'll get back to you within 24 hours.
+    </p>
+
+    <div class="contact-card">
+      <form action="mailto:asadeghi@trubiome.ai" method="POST" enctype="text/plain">
+        <div>
+          <label>Your Name</label>
+          <input type="text" name="name" required />
+        </div>
+
+        <div>
+          <label>Email Address</label>
+          <input type="email" name="email" required />
+        </div>
+
+        <div>
+          <label>Company Name</label>
+          <input type="text" name="company" required />
+        </div>
+
+        <div>
+          <label>How can we help you?</label>
+          <textarea name="message" placeholder="Tell us about your goals or project..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2025 TruBiome.AI. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="mailto:asadeghi@trubiome.ai">Contact</a>
+        <a href="https://www.linkedin.com/company/trubiome-ai/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
