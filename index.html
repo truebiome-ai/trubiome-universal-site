@@ -421,6 +421,119 @@
     border-radius: 14px !important;
   }
 }
+/* CUSTOMER CONFUSION SECTION */
+.confusion-section {
+  max-width: 1100px;
+  margin: 80px auto 40px;
+  padding: 0 20px;
+}
+
+.confusion-inner {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  background: linear-gradient(135deg, #eef4ff, #f6f3ff);
+  border-radius: 32px;
+  padding: 32px 32px 36px;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.12);
+}
+
+.confusion-copy {
+  flex: 1.2;
+}
+
+.confusion-visual {
+  flex: 1;
+}
+
+.confusion-visual img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+}
+
+.pill-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.confusion-copy h2 {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin: 8px 0 12px;
+}
+
+.confusion-copy p {
+  margin: 0 0 14px;
+  color: #4b5563;
+}
+
+.confusion-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 20px 0 10px;
+}
+
+.confusion-stat {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 14px 14px 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.confusion-number {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.confusion-stat p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.confusion-footer {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+  margin-top: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .confusion-inner {
+    flex-direction: column;
+    padding: 24px 18px 26px;
+  }
+
+  .confusion-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .confusion-copy h2 {
+    font-size: 1.5rem;
+  }
+
+  .confusion-section {
+    margin: 48px auto 24px;
+  }
+}
+
 
   </style>
 </head>
@@ -487,6 +600,45 @@
     <div class="value-image">
       <img src="value-section.png" alt="AI analyzing health and supplement data" />
     </div>
+<!-- CUSTOMER CONFUSION SECTION -->
+<section class="confusion-section">
+  <div class="confusion-inner">
+    <div class="confusion-copy">
+      <span class="pill-label">THE PROBLEM</span>
+      <h2>Customer confusion is costing supplement brands sales.</h2>
+      <p>
+        Shoppers want to feel confident they’re choosing the right product for their
+        symptoms. When labels, claims, and options feel overwhelming, they hesitate —
+        and often leave without buying.
+      </p>
+
+      <div class="confusion-stats">
+        <div class="confusion-stat">
+          <span class="confusion-number">~70%</span>
+          <p>Average online cart abandonment rate across e-commerce.</p>
+        </div>
+        <div class="confusion-stat">
+          <span class="confusion-number">1 in 4</span>
+          <p>Supplement users say they feel fully confident in the information they see.</p>
+        </div>
+        <div class="confusion-stat">
+          <span class="confusion-number">High support load</span>
+          <p>Teams spend hours answering “Which supplement should I take?” questions.</p>
+        </div>
+      </div>
+
+      <p class="confusion-footer">
+        TruBiome.AI turns that confusion into clear, personalized guidance — before
+        customers abandon the cart.
+      </p>
+    </div>
+
+    <div class="confusion-visual">
+      <!-- Replace this with your own image -->
+      <img src="value-section2.png" alt="Confused supplement shopper" />
+    </div>
+  </div>
+</section>
 
   </div>
 </section>
