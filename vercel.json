@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/cerathrive-demo",
-      "destination": "https://cerathrive-demo.vercel.app",
+      "destination": "https://trubiome-demo-cerathrive.vercel.app/",
       "permanent": false
     }
   ]
