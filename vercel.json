@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/cerathrive-demo",
+      "destination": "https://cerathrive-demo.vercel.app",
+      "permanent": false
+    }
+  ]
+}
