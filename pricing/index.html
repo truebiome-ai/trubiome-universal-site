@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>TruBiome.AI – Pricing</title>
+  <title>TruBiome.AI – Plans</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -16,18 +16,30 @@
       background: #f9fafb;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
 
-    /* TOP HERO BAR (matches home style but flatter) */
+    /* TOP HERO BAR */
     .hero-shell {
       background: linear-gradient(135deg, #6ac6ff, #a66bff);
       border-radius: 0 0 40px 40px;
-      padding: 18px 20px 50px;
+      padding: 18px 20px 54px;
       max-width: 1100px;
-      margin: 0 auto 40px;
+      margin: 0 auto 38px;
       color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle glow */
+    .hero-shell::before{
+      content:"";
+      position:absolute;
+      inset:-120px -120px auto auto;
+      width:360px;
+      height:360px;
+      background: radial-gradient(circle, rgba(255,255,255,0.22), rgba(255,255,255,0));
+      filter: blur(6px);
+      pointer-events:none;
     }
 
     .hero-header {
@@ -36,6 +48,8 @@
       justify-content: space-between;
       max-width: 1060px;
       margin: 0 auto 22px;
+      position: relative;
+      z-index: 1;
     }
 
     .hero-brand {
@@ -50,7 +64,7 @@
       border-radius: 999px;
       display: block;
       object-fit: contain;
-      margin-top: -2px; /* tiny optical adjustment */
+      margin-top: -2px;
     }
 
     .hero-title {
@@ -69,13 +83,8 @@
       color: rgba(255, 255, 255, 0.9);
     }
 
-    .nav-link:hover {
-      text-decoration: underline;
-    }
-
-    .nav-active {
-      font-weight: 700;
-    }
+    .nav-link:hover { text-decoration: underline; }
+    .nav-active { font-weight: 700; }
 
     .nav-cta {
       padding: 8px 18px;
@@ -84,45 +93,103 @@
       text-decoration: none;
       color: white;
       font-size: 0.9rem;
-      background: rgba(15, 23, 42, 0.08);
+      background: rgba(15, 23, 42, 0.10);
+      transition: background 160ms ease, transform 160ms ease;
     }
 
     .nav-cta:hover {
       background: rgba(15, 23, 42, 0.18);
+      transform: translateY(-1px);
     }
 
     .hero-pricing-main {
-      max-width: 650px;
+      max-width: 760px;
       margin: 0 auto;
       text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-pricing-eyebrow{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:6px 12px;
+      border-radius:999px;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.22);
+      font-size: 0.85rem;
+      margin-bottom: 14px;
     }
 
     .hero-pricing-title {
-      font-size: 2.2rem;
+      font-size: 2.25rem;
       font-weight: 800;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
     }
 
     .hero-pricing-subtitle {
-      font-size: 0.98rem;
-      line-height: 1.6;
+      font-size: 1.02rem;
+      line-height: 1.65;
       opacity: 0.95;
-      max-width: 520px;
-      margin: 0 auto;
+      max-width: 640px;
+      margin: 0 auto 18px;
     }
 
-    /* MAIN PRICING SECTION */
+    .hero-cta-row{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top: 6px;
+    }
+
+    .hero-cta{
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border: 1px solid rgba(255,255,255,0.30);
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .hero-cta.primary{
+      background: rgba(17,24,39,0.18);
+      border: 1px solid rgba(255,255,255,0.45);
+      color: #fff;
+    }
+
+    .hero-cta.primary:hover{ transform: translateY(-1px); background: rgba(17,24,39,0.26); }
+    .hero-cta.secondary{
+      background: rgba(255,255,255,0.12);
+      color:#fff;
+    }
+    .hero-cta.secondary:hover{ transform: translateY(-1px); background: rgba(255,255,255,0.18); }
+
+    /* MAIN SECTION */
     .pricing-wrapper {
       max-width: 1100px;
-      margin: 0 auto 80px;
+      margin: 0 auto 34px;
       padding: 0 20px;
     }
 
-    .pricing-toggle-note {
+    .pricing-note {
       text-align: center;
-      font-size: 0.85rem;
-      opacity: 0.7;
-      margin-bottom: 22px;
+      font-size: 0.92rem;
+      color: rgba(17,24,39,0.72);
+      margin: 0 auto 22px;
+      max-width: 820px;
+      line-height: 1.6;
+    }
+
+    .pricing-note strong{
+      color:#111827;
+      font-weight: 700;
     }
 
     .pricing-grid {
@@ -139,58 +206,64 @@
       max-width: 320px;
       flex: 1 1 260px;
       box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-      border: 1px solid rgba(148, 163, 184, 0.3);
+      border: 1px solid rgba(148, 163, 184, 0.32);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .plan-card.featured{
+      border: 1px solid rgba(79,70,229,0.35);
+      box-shadow: 0 18px 46px rgba(79,70,229,0.14);
     }
 
     .plan-badge {
       font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 8px;
-      opacity: 0.7;
+      color: rgba(17,24,39,0.65);
     }
 
     .plan-badge.featured {
-      color: #1d4ed8;
+      color: #4f46e5;
     }
 
     .plan-name {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 800;
-      margin-bottom: 6px;
+      margin: 0 0 6px;
     }
 
     .plan-desc {
       font-size: 0.95rem;
-      opacity: 0.9;
-      margin-bottom: 18px;
-      line-height: 1.5;
+      opacity: 0.92;
+      margin: 0 0 14px;
+      line-height: 1.55;
     }
 
+    /* Quote-only */
     .plan-price-row {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid rgba(148, 163, 184, 0.25);
     }
 
     .plan-price {
-      font-size: 1.9rem;
+      font-size: 1.15rem;
       font-weight: 800;
-    }
-
-    .plan-price span {
-      font-size: 0.95rem;
-      font-weight: 500;
-      opacity: 0.8;
-      margin-left: 4px;
+      margin-bottom: 4px;
     }
 
     .plan-note {
-      font-size: 0.8rem;
-      opacity: 0.7;
-      margin-top: 4px;
+      font-size: 0.85rem;
+      opacity: 0.78;
+      line-height: 1.45;
     }
 
     .plan-features {
@@ -222,7 +295,7 @@
       border-radius: 999px;
       border: none;
       font-size: 0.92rem;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       text-decoration: none;
       text-align: center;
@@ -234,27 +307,61 @@
       color: #ffffff;
     }
 
-    .plan-cta.primary:hover {
-      background: #4338ca;
-    }
+    .plan-cta.primary:hover { background: #4338ca; }
 
     .plan-cta.outline {
       background: #ffffff;
       color: #111827;
-      border: 1px solid rgba(148, 163, 184, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.85);
     }
 
-    .plan-cta.outline:hover {
-      background: #f9fafb;
-    }
+    .plan-cta.outline:hover { background: #f9fafb; }
 
     .plan-footer {
       font-size: 0.82rem;
-      opacity: 0.7;
+      opacity: 0.72;
       margin-top: 10px;
+      line-height: 1.4;
     }
 
-    /* FAQ SECTION */
+    /* TRUST STRIP */
+    .trust-strip{
+      max-width: 1100px;
+      margin: 0 auto 70px;
+      padding: 0 20px;
+    }
+
+    .trust-inner{
+      background: #ffffff;
+      border: 1px solid rgba(148, 163, 184, 0.30);
+      border-radius: 24px;
+      padding: 18px 18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      box-shadow: 0 14px 34px rgba(15,23,42,0.06);
+    }
+
+    .trust-item{
+      flex: 1 1 210px;
+      min-width: 210px;
+    }
+
+    .trust-item .k{
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .trust-item .v{
+      font-size: 0.9rem;
+      opacity: 0.80;
+      line-height: 1.45;
+    }
+
+    /* FAQ */
     .pricing-faq {
       max-width: 900px;
       margin: 0 auto 90px;
@@ -268,22 +375,17 @@
       text-align: left;
     }
 
-    .faq-item {
-      margin-bottom: 18px;
-    }
-
-    .faq-question {
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
+    .faq-item { margin-bottom: 18px; }
+    .faq-question { font-weight: 700; margin-bottom: 4px; }
 
     .faq-answer {
       font-size: 0.95rem;
       line-height: 1.6;
       opacity: 0.9;
+      margin: 0;
     }
 
-    /* FOOTER SIMPLE */
+    /* FOOTER */
     .footer {
       padding: 18px 20px 26px;
       border-top: 1px solid #e5e7eb;
@@ -311,15 +413,13 @@
       color: #4b5563;
     }
 
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
+    .footer-links a:hover { text-decoration: underline; }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
       .hero-shell {
         border-radius: 0 0 24px 24px;
-        padding: 14px 16px 40px;
+        padding: 14px 16px 44px;
       }
 
       .hero-header {
@@ -330,78 +430,75 @@
 
       .hero-nav {
         flex-wrap: wrap;
+        gap: 14px;
       }
 
-      .hero-pricing-title {
-        font-size: 1.7rem;
+      .hero-pricing-title { font-size: 1.75rem; }
+      .pricing-wrapper { margin-bottom: 26px; }
+
+      .hero-cta-row{ justify-content: flex-start; }
+      .hero-pricing-main{ text-align: left; }
+      .hero-pricing-subtitle{ margin-left: 0; margin-right: 0; }
+    }
+
+    /* ========================================= */
+    /* MOBILE FIXES — DO NOT TOUCH DESKTOP */
+    /* ========================================= */
+    @media (max-width: 768px) {
+      .hero-header,
+      .demo-header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 14px 0 !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
       }
 
-      .pricing-wrapper {
-        margin-bottom: 60px;
+      .hero-title,
+      .demo-title {
+        font-size: 1rem !important;
+      }
+
+      .hero-nav {
+        gap: 14px;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .demo-main {
+        flex-direction: column;
+        padding: 0 14px;
+        gap: 20px;
+      }
+
+      .demo-sidebar {
+        width: 100%;
+        max-width: 100%;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .demo-frame-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 16px;
+        border-radius: 18px;
+      }
+
+      iframe {
+        width: 100% !important;
+        height: 600px !important;
+        border-radius: 14px !important;
       }
     }
-    /* ========================================= */
-/* MOBILE FIXES — DO NOT TOUCH DESKTOP */
-/* ========================================= */
-@media (max-width: 768px) {
-
-  /* ---------- UNIVERSAL HEADERS ---------- */
-  .hero-header,
-  .demo-header {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    padding: 14px 0 !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-  }
-
-  .hero-title,
-  .demo-title {
-    font-size: 1rem !important;
-  }
-
-  .hero-nav {
-    gap: 14px;
-    font-size: 0.9rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  /* ---------- DEMO PAGE LAYOUT ---------- */
-  .demo-main {
-    flex-direction: column;
-    padding: 0 14px;
-    gap: 20px;
-  }
-
-  .demo-sidebar {
-    width: 100%;
-    max-width: 100%;
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .demo-frame-wrap {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 16px;
-    border-radius: 18px;
-  }
-
-  iframe {
-    width: 100% !important;
-    height: 600px !important;
-    border-radius: 14px !important;
-  }
-}
-
   </style>
 </head>
-<body>
 
+<body>
   <!-- TOP GRADIENT HEADER -->
   <header class="hero-shell">
     <div class="hero-header">
@@ -413,7 +510,7 @@
       <nav class="hero-nav">
         <a href="/" class="nav-link">Home</a>
         <a href="/who-we-serve" class="nav-link">Who We Serve</a>
-        <a href="/pricing" class="nav-link nav-active">Pricing</a>
+        <a href="/pricing" class="nav-link nav-active">Plans</a>
         <a href="/demo" class="nav-link">Demo</a>
         <a href="/contact" class="nav-link">Contact</a>
       </nav>
@@ -422,84 +519,91 @@
     </div>
 
     <div class="hero-pricing-main">
-      <h1 class="hero-pricing-title">Simple pricing for powerful AI.</h1>
+      <div class="hero-pricing-eyebrow">Plans & Engagement Models</div>
+      <h1 class="hero-pricing-title">Quote-based deployments tailored to your brand.</h1>
       <p class="hero-pricing-subtitle">
-        Choose a plan that fits your current volume and roadmap. All plans include symptom-to-product recommendations, functional medicine logic, and white-label branding.
+        TruBiome.AI is a white-label AI assistant that turns symptom questions into confident product decisions —
+        using <strong>your catalog</strong>, your branding, and your positioning. We scope every deployment based on
+        traffic volume, catalog depth, and integration requirements.
       </p>
+
+      <div class="hero-cta-row">
+        <a href="/demo" class="hero-cta primary">Book a Demo</a>
+        <a href="/contact" class="hero-cta secondary">Request a Quote</a>
+      </div>
     </div>
   </header>
 
-  <!-- PRICING GRID -->
   <main>
+    <!-- PLANS GRID -->
     <section class="pricing-wrapper">
-      <p class="pricing-toggle-note">
-       
+      <p class="pricing-note">
+        <strong>No public pricing.</strong> Every plan is custom-quoted based on your traffic volume, catalog complexity,
+        and deployment scope. Most teams start with a Pilot and expand into a Growth or Enterprise rollout.
       </p>
 
       <div class="pricing-grid">
-        <!-- STARTER -->
+        <!-- PILOT -->
         <article class="plan-card">
           <div>
-            <div class="plan-badge">Starter</div>
-            <h2 class="plan-name">Pilot</h2>
+            <div class="plan-badge">Pilot</div>
+            <h2 class="plan-name">Pilot Deployment</h2>
             <p class="plan-desc">
-              For emerging brands validating AI-guided supplement recommendations on a single site.
+              Validate TruBiome.AI on one site with brand-locked recommendations and a scope-capped rollout.
             </p>
 
             <div class="plan-price-row">
-              <div class="plan-price">
-                $499<span>/month</span>
-              </div>
+              <div class="plan-price">Custom Quote</div>
               <div class="plan-note">
-                + one-time setup fee for initial configuration.
+                Scoped by catalog depth + monthly usage. Includes setup, brand styling, and initial logic configuration.
               </div>
             </div>
 
             <ul class="plan-features">
-              <li>Up to 10,000 AI-assisted sessions per month.</li>
-              <li>Single website or storefront.</li>
-              <li>Symptom-to-product recommendation logic.</li>
-              <li>Basic white-label branding (logo + colors).</li>
-              <li>Email support.</li>
+              <li>Single domain deployment (one storefront or funnel)</li>
+              <li>Brand-locked recommendations (your products only)</li>
+              <li>Symptom intake + one follow-up question</li>
+              <li>Core symptom → product mapping + explanations</li>
+              <li>Basic white-label styling (logo + colors)</li>
+              <li>Email support + pilot optimization checkpoint</li>
             </ul>
           </div>
 
           <div>
-            <a href="/demo" class="plan-cta outline">Start with a demo</a>
-            <p class="plan-footer">Best for newer brands and clinics.</p>
+            <a href="/contact" class="plan-cta outline">Request Pilot Quote</a>
+            <p class="plan-footer">Best for teams validating conversion impact before scaling.</p>
           </div>
         </article>
 
         <!-- GROWTH (FEATURED) -->
-        <article class="plan-card">
+        <article class="plan-card featured">
           <div>
-            <div class="plan-badge featured">Most popular</div>
-            <h2 class="plan-name">Growth</h2>
+            <div class="plan-badge featured">Most common starting point</div>
+            <h2 class="plan-name">Growth Deployment</h2>
             <p class="plan-desc">
-              For established brands that want AI guidance deeply integrated into their customer journey.
+              Fully embedded AI guidance across your customer journey — optimized for conversion and trust.
             </p>
 
             <div class="plan-price-row">
-              <div class="plan-price">
-                $999<span>/month</span>
-              </div>
+              <div class="plan-price">Custom Quote</div>
               <div class="plan-note">
-                + one-time setup & onboarding.
+                Designed for established brands. Includes deeper branding, advanced logic, and optimization support.
               </div>
             </div>
 
             <ul class="plan-features">
-              <li>Up to 50,000 AI-assisted sessions per month.</li>
-              <li>Multiple sites or funnels under one brand.</li>
-              <li>Advanced symptom & scenario mapping.</li>
-              <li>Deeper white-labeling & copy customization.</li>
-              <li>Priority support and optimization check-ins.</li>
+              <li>Multiple funnels or sections under one brand</li>
+              <li>Advanced symptom + scenario mapping (higher precision)</li>
+              <li>Deeper white-labeling (tone, copy, and UI polish)</li>
+              <li>Catalog-aware recommendations with smart explanations</li>
+              <li>Priority support + monthly optimization check-ins</li>
+              <li>Optional analytics summary (top symptoms + top SKUs)</li>
             </ul>
           </div>
 
           <div>
-            <a href="/demo" class="plan-cta primary">Book a Growth plan demo</a>
-            <p class="plan-footer">Ideal for supplement brands ready to scale.</p>
+            <a href="/demo" class="plan-cta primary">Book a Demo</a>
+            <p class="plan-footer">Ideal for supplement brands ready to scale guidance site-wide.</p>
           </div>
         </article>
 
@@ -507,59 +611,100 @@
         <article class="plan-card">
           <div>
             <div class="plan-badge">Enterprise</div>
-            <h2 class="plan-name">Enterprise</h2>
+            <h2 class="plan-name">Enterprise Partnerships</h2>
             <p class="plan-desc">
-              For large brands, labs, and platforms that need custom workflows, integrations, or very high volumes.
+              Custom workflows, integrations, and high-volume infrastructure for large brands, labs, and platforms.
             </p>
 
             <div class="plan-price-row">
-              <div class="plan-price">
-                Custom<span>/month</span>
-              </div>
+              <div class="plan-price">Custom Quote</div>
               <div class="plan-note">
-                Tailored pricing based on volume, integrations, and support.
+                Tailored pricing based on integrations, SLA requirements, and deployment complexity.
               </div>
             </div>
 
             <ul class="plan-features">
-              <li>Unlimited brands and domains under one umbrella.</li>
-              <li>Custom symptom models & protocol logic.</li>
-              <li>Deeper integrations (e-commerce, CRM, or lab systems).</li>
-              <li>Dedicated success & technical support.</li>
-              <li>Priority roadmap input.</li>
+              <li>High-volume deployments + custom routing logic</li>
+              <li>Deep integrations (e-commerce, CRM, or lab workflows)</li>
+              <li>Custom symptom models & protocol logic</li>
+              <li>Dedicated success + technical support</li>
+              <li>Optional SLAs and priority roadmap input</li>
+              <li>Multi-brand or multi-domain structures supported</li>
             </ul>
           </div>
 
           <div>
-            <a href="/contact" class="plan-cta outline">Talk to sales</a>
-            <p class="plan-footer">Perfect for high-volume or multi-brand groups.</p>
+            <a href="/contact" class="plan-cta outline">Talk to Sales</a>
+            <p class="plan-footer">Best for platforms, multi-brand groups, and lab/testing companies.</p>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- TRUST STRIP -->
+    <section class="trust-strip">
+      <div class="trust-inner">
+        <div class="trust-item">
+          <div class="k">Deployment-ready</div>
+          <div class="v">Embed in minutes via iframe or widget. Custom deployment options available.</div>
+        </div>
+        <div class="trust-item">
+          <div class="k">Brand-locked</div>
+          <div class="v">Recommendations can be restricted to your catalog to protect positioning.</div>
+        </div>
+        <div class="trust-item">
+          <div class="k">Built for trust</div>
+          <div class="v">Clear explanations, safer language, and consistent brand voice across the journey.</div>
+        </div>
+        <div class="trust-item">
+          <div class="k">Custom-scoped pricing</div>
+          <div class="v">Quoted by volume, catalog depth, and integrations — not a one-size-fits-all tier.</div>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section class="pricing-faq">
-      <h2>Pricing FAQs</h2>
+      <h2>Plans FAQs</h2>
 
       <div class="faq-item">
-        <div class="faq-question">Do these prices include setup?</div>
+        <div class="faq-question">How is pricing determined?</div>
         <p class="faq-answer">
-          All plans include a one-time setup fee to configure TruBiome.AI with your product data, symptom logic, and branding. You can adjust that amount based on the complexity of each client.
+          We quote deployments based on monthly traffic/usage, catalog depth, logic complexity, and any required integrations.
+          This keeps pricing aligned to real scope — and ensures you’re not paying for features you don’t need.
         </p>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question">Can I change the plans later?</div>
+        <div class="faq-question">What’s included in setup?</div>
         <p class="faq-answer">
-          Yes. These tiers are placeholders so you can show structure on sales calls. You can refine the pricing, limits, and features as you validate what works best with early customers.
+          Setup typically includes brand styling, catalog ingestion or configuration, symptom-to-product mapping,
+          QA testing, and a launch-ready embed (iframe or widget). Advanced deployments may include additional
+          logic layers or integrations.
         </p>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question">What if a client needs something custom?</div>
+        <div class="faq-question">How fast can we go live?</div>
         <p class="faq-answer">
-          That's what the Enterprise plan is for. You can scope custom integrations, unique logic, or higher usage and quote accordingly.
+          Pilot deployments can go live quickly once we have your product data and branding assets.
+          Growth and Enterprise rollouts depend on catalog depth, integration needs, and desired customization.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can we start small and expand later?</div>
+        <p class="faq-answer">
+          Yes. Many brands begin with a Pilot on one funnel or storefront, then expand into Growth once the impact is proven.
+          We can also scope a phased rollout from day one.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do you recommend only our products?</div>
+        <p class="faq-answer">
+          For brand deployments, recommendations can be locked to your catalog. If you want a broader “educational” mode,
+          we can scope that separately depending on your compliance and positioning preferences.
         </p>
       </div>
     </section>
@@ -575,6 +720,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>
